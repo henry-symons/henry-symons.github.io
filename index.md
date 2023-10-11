@@ -2,9 +2,9 @@
 
 ---
 
-### Category Name 1 
+### Data Science Projects
 
-[Project 1 Title](/sample_page)
+[The Effects of the CAZ on Bristol Air Quality](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
