@@ -5,7 +5,6 @@
 ### Data Science Projects
 
 [The Effects of the CAZ on Bristol Air Quality](/pages/CAZ_project.md)
-{% include no2_historic_bristol.html %}
 <img src="images/CAZplots.png?raw=true"/>
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
