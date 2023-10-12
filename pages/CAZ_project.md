@@ -13,11 +13,11 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 {% include no2_historic_bristol.html %}
 
-### 3. Support the selection of appropriate statistical tools and techniques
+### 3. Quantifying the effectiveness of the CAZ
 
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
-### 4. Provide a basis for further data collection through surveys or experiments
+### 4. Conclusions
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
