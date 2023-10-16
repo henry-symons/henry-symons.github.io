@@ -42,13 +42,29 @@ Broadly speaking, we can see NO2 concentrations have decreased year-on-year, how
 
 To quantify the effects of the CAZ, we consider data from 1 year prior to the introduction of the scheme onwards. Here the number and locations of measurement sites are consistent, and the influence of other factors (e.g. the effects of intermittent COVID-19 measures during 2020 and 2021) should be minimal.
 
-Firstly, we 
+Firstly, we examine week-average time series NO2 concentrations, either averaged across all measurement sites, or plotted individually:
+
 <img src="images/CAZ/timeseries.png?raw=true"/>
+
+Looking at the averaged data, weekly concentrations fluctuate significantly making longer-term changes unclear, however, there appears to be slight long-term decrease in NO2 after the introduction of the CAZ. Looking at individual sites, we see that most remain unchanged, however, one site within the CAZ (site ID 501) shows a substantial decrease in NO2 measured after the scheme is introduced.
+
+To see these changes more clearly, mean NO2 concentrations are plotted before and after the introduction of the CAZ for each site:
 
 <img src="images/CAZ/barplot.png?raw=true"/>
 
+In this plot we can clearly see that all locations within the CAZ have experienced a reduction in mean NO2 concentration, when compared with the year prior to its introduction. In particular, the site with highest NO2 concentrations (site ID 501) has shown a substantial drop and is now close to the target level of 40 µg/m3.
+
+One final check in this exploratory analysis is to confirm that differences are not simply a result of seasonal variation in NO2, as a full year has not yet passed since the introduction of the CAZ.
+
+<img src="images/CAZ/barplot.png?raw=true"/>
+
+In these plots, we compare NO2 concentrations by month, averaged over sites either inside or outside the CAZ. We see that for almost all months, sites inside the CAZ have experienced a substantial decrease in NO2 concentration compared with the same months before the CAZ introduction.
+
+
 ### 4. Conclusions
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Overall, this preliminary analysis appears to indicate that the introduction of the CAZ has been successful in improving air quality around Bristol city centre. All measurement locations within the CAZ have recorded lower NO2 concentrations since the introduction of the scheme. Significantly, the site with the highest concentration the year prior to CAZ introduction (around 64 μg/m3) has since recorded a number much closer to the legal limit (around 47 μg/m3). The observed decreases do no appear to be a result of seasonal changes in NO2 concentrations.
+
+A more comprehensive dataset with a greater number of measurement sites, and additional time passing since the introduction of the scheme will enable more extensive analysis of the effects of the CAZ. For example, an updated diffusion tube dataset containing data for 2023 should allow further insight and quantification of the changes seen.
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
