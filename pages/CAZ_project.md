@@ -12,6 +12,7 @@ For this project, we examine two air quality datasets; one with data from 18 loc
 
 Firstly, we examine the decreasing long-term trend in NO2 concentration, and validate that the smaller subset of locations reflects the overall trend in NO2 levels:
 <img src="images/CAZ/longterm_no2_trends.png?raw=true"/>
+{% include images/CAZ/longterm_no2_trends.png %}
 
 
 ### 2. Spatial mapping of NO2 concentrations
