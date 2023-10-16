@@ -8,7 +8,9 @@ To quantify air quality, we examine the concentration of NO2 from momnitoring si
 
 ### 1. Temporal trends in NO2 concentration
 
-For this project, we examine two publicly available air quality datasets; one with data from 18 locations but spanning 1993 until present with high time resolution, and one with yearly mean NO2 concentrations between 2010 and 2022 from 351 locations, collected using diffusion tubes.
+For this project, we examine two air quality datasets; one with data from 18 locations but spanning 1993 until present with high time resolution (continuous dataset), and one with yearly mean NO2 concentrations between 2010 and 2022 from 351 locations, collected using diffusion tubes (diffusion tubes dataset).
+
+Firstly, we examine the decreasing long-term trend in NO2 concentration, and validate that the smaller subset of locations reflects the overall trend in NO2 levels:
 
 
 
