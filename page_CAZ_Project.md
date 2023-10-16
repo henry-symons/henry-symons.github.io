@@ -56,7 +56,7 @@ In this plot we can clearly see that all locations within the CAZ have experienc
 
 One final check in this exploratory analysis is to confirm that differences are not simply a result of seasonal variation in NO2, as a full year has not yet passed since the introduction of the CAZ.
 
-<img src="images/CAZ/barplot.png?raw=true"/>
+<img src="images/CAZ/caz_bymonth.png?raw=true"/>
 
 In these plots, we compare NO2 concentrations by month, averaged over sites either inside or outside the CAZ. We see that for almost all months, sites inside the CAZ have experienced a substantial decrease in NO2 concentration compared with the same months before the CAZ introduction.
 
@@ -67,4 +67,4 @@ Overall, this preliminary analysis appears to indicate that the introduction of 
 
 A more comprehensive dataset with a greater number of measurement sites, and additional time passing since the introduction of the scheme will enable more extensive analysis of the effects of the CAZ. For example, an updated diffusion tube dataset containing data for 2023 should allow further insight and quantification of the changes seen.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+For more details see [GitHub Project](https://guides.github.com/features/mastering-markdown/).
