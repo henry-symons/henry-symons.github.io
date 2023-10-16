@@ -24,19 +24,25 @@ Looking on a shorter timescale, mean hourly concentrations peak at over 50 µg/m
 
 ### 2. Spatial mapping of NO2 concentrations
 
-To map the spatial distribution of NO2 levels, we introduce a third dataset containing coordinates of air quality measurement sites in Bristol, along with a polygon covering the coordinates of the CAZ. We firstly determine which locations lie within this region, and which belong to each dataset studied:
-{% include measurement_sites_bristol.html %}
+To map the spatial distribution of NO2 levels, we introduce a third dataset containing coordinates of air quality measurement sites in Bristol, along with a polygon covering the coordinates of the CAZ. We firstly determine which locations lie within this region, and which belong to each dataset studied:{% include measurement_sites_bristol.html %}
+
 
 This enables the plotting of mean NO2 concentrations at each location by year of the dataset:
 {% include no2_historic_bristol.html %}
 
+
 We can further extend this analysis to the diffusion tube dataset for a more complete picture of NO2 levels since 2010 (however this data does not currently span past 2022 so is not useful for quantifying the effects of the CAZ):
 {% include no2_diffusion_bristol.html %}
+
 
 Broadly speaking, we can see NO2 concentrations have decreased year-on-year, however in several locations around the city centre they remain above the 40 μg/m3 limit.
 
 
 ### 3. Quantifying the effectiveness of the CAZ
+
+To quantify the effects of the CAZ, we consider data from 1 year prior to the introduction of the scheme onwards. Here the number and locations of measurement sites are consistent, and the influence of other factors (e.g. the effects of intermittent COVID-19 measures during 2020 and 2021) should be minimal.
+
+Firstly, we 
 <img src="images/CAZ/timeseries.png?raw=true"/>
 
 <img src="images/CAZ/barplot.png?raw=true"/>
