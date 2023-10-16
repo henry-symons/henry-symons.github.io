@@ -24,7 +24,8 @@ Looking on a shorter timescale, mean hourly concentrations peak at over 50 µg/m
 
 ### 2. Spatial mapping of NO2 concentrations
 
-To map the spatial distribution of NO2 levels, we introduce a third dataset containing coordinates of air quality measurement sites in Bristol, along with a polygon covering the coordinates of the CAZ. We firstly determine which locations lie within this region, and which belong to each dataset studied:{% include measurement_sites_bristol.html %}
+To map the spatial distribution of NO2 levels, we introduce a third dataset containing coordinates of air quality measurement sites in Bristol, along with a polygon covering the coordinates of the CAZ. We firstly determine which locations lie within this region, and which belong to each dataset studied:
+{% include measurement_sites_bristol.html %}
 
 
 This enables the plotting of mean NO2 concentrations at each location by year of the dataset:
