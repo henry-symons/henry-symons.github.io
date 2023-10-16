@@ -2,7 +2,7 @@
 
 ---
 
-### Data Science Projects
+### Python Projects
 
 [The Effects of the CAZ on Bristol Air Quality](/page_CAZ_Project.md)
 <img src="images/CAZplots.png?raw=true"/>
@@ -16,7 +16,7 @@
 
 ---
 
-### Category Name 2
+### Other Projects
 
 - [Project 1 Title](http://example.com/)
 - [Project 2 Title](http://example.com/)
