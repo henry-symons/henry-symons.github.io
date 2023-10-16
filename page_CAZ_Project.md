@@ -39,11 +39,11 @@ We can further extend this analysis to the diffusion tube dataset for a more com
 Broadly speaking, we can see NO2 concentrations have decreased year-on-year, however in several locations around the city centre they remain above the 40 μg/m3 limit.
 
 
-### 3. Quantifying the effectiveness of the CAZ
+### 3. Quantifying the effects of the CAZ
 
 To quantify the effects of the CAZ, we consider data from 1 year prior to the introduction of the scheme onwards. Here the number and locations of measurement sites are consistent, and the influence of other factors (e.g. the effects of intermittent COVID-19 measures during 2020 and 2021) should be minimal.
 
-Firstly, we examine week-average time series NO2 concentrations, either averaged across all measurement sites, or plotted individually:
+Firstly, we examine a times-series of weekly-average NO2 concentrations, either averaged across all measurement sites, or plotted individually:
 
 <img src="images/CAZ/timeseries.png?raw=true"/>
 
