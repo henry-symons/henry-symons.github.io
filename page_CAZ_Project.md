@@ -10,14 +10,14 @@ To quantify air quality, we examine the concentration of NO2 from momnitoring si
 
 For this project, we examine two air quality datasets; one with data from 18 locations but spanning 1993 until present with high time resolution (continuous dataset), and one with yearly mean NO2 concentrations between 2010 and 2022 from 351 locations, collected using diffusion tubes (diffusion tubes dataset).
 
-Firstly, we examine the decreasing long-term trend in NO2 concentration, and validate that the smaller subset of locations reflects the overall trend in NO2 levels:
+Firstly, we examine the decreasing long-term trend in NO2 concentration, and validate that the smaller subset of locations (continuous dataset) reflects the overall trend in NO2 levels in the larger set of locations (diffusion tubes dataset):
 <img src="images/CAZ/longterm_no2_trends.png?raw=true"/>
 
 We can further investigate temporal trends over shorter time periods within the continuous air quality dataset:
 <img src="images/CAZ/periodic_no2_trends.png?raw=true"/>
 
 Here we can see several periodic trends in NO2 concentrations:
-Firstly, we see a pretty substantial seasonal effect with levels highest during winter, but decreasing by approximately a quarter during the summer months. This behaviour is well documented and could indicate both a change in use (e.g. more heating or engine idling during colder months) and a seasonal difference in the pollutant lifetimes (which are shortest during summer months).
+Firstly, we see a substantial seasonal effect with levels highest during winter, but decreasing by approximately a quarter during the summer months. This behaviour is well documented and could indicate both a change in use (e.g. more heating or engine idling during colder months) and a seasonal difference in the pollutant lifetimes (which are shortest during summer months).
 Secondly, we see a clear pattern associated with typical vehicle usage - a gradual build up during consecutive weekdays, with a substantial drop on weekends.
 Looking on a shorter timescale, mean hourly concentrations peak at over 50 µg/m3 between 8-9 am and 5-6 pm, strongly coinciding with typical commuting times. Notably, overnight NO2 levels decrease to less than half the daytime maxima, showing the relatively short lifetime of this pollutant.
 
