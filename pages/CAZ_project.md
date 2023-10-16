@@ -1,6 +1,6 @@
 ## Investigating the effectiveness of the CAZ at improving air quality in Bristol
 
-**Project description:** Bristol City Council introduced a CAZ, where certain types of vehicles were charged a daily fee to enter a specified area around the city centre, in November 2022 to attempt to meet government guidance on air quality.
+**Project description:** Bristol City Council introduced a clean air zone (CAZ), where certain types of vehicles were charged a daily fee to enter a specified area around the city centre, in November 2022 to attempt to meet government guidance on air quality.
 
 In this project I investigate the success of this scheme in achieving these aims.
 
