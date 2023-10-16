@@ -14,7 +14,7 @@ Firstly, we examine the decreasing long-term trend in NO2 concentration, and val
 <img src="images/CAZ/longterm_no2_trends.png?raw=true"/>
 
 We can further investigate temporal trends over shorter time periods within the continuous air quality dataset:
-<img src="images/CAZ/longterm_no2_trends.png?raw=true"/>
+<img src="images/CAZ/periodic_no2_trends.png?raw=true"/>
 
 Here we can see several periodic trends in NO2 concentrations:
 Firstly, we see a pretty substantial seasonal effect with levels highest during winter, but decreasing by approximately a quarter during the summer months. This behaviour is well documented and could indicate both a change in use (e.g. more heating or engine idling during colder months) and a seasonal difference in the pollutant lifetimes (which are shortest during summer months).
@@ -25,20 +25,21 @@ Looking on a shorter timescale, mean hourly concentrations peak at over 50 µg/m
 ### 2. Spatial mapping of NO2 concentrations
 
 To map the spatial distribution of NO2 levels, we introduce a third dataset containing coordinates of air quality measurement sites in Bristol, along with a polygon covering the coordinates of the CAZ. We firstly determine which locations lie within this region, and which belong to each dataset studied:
-{% include no2_historic_bristol.html %}
+{% include measurement_sites_bristol.html %}
 
 This enables the plotting of mean NO2 concentrations at each location by year of the dataset:
 {% include no2_historic_bristol.html %}
 
 We can further extend this analysis to the diffusion tube dataset for a more complete picture of NO2 levels since 2010 (however this data does not currently span past 2022 so is not useful for quantifying the effects of the CAZ):
-{% include no2_historic_bristol.html %}
+{% include no2_diffusion_bristol.html %}
 
 Broadly speaking, we can see NO2 concentrations have decreased year-on-year, however in several locations around the city centre they remain above the 40 μg/m3 limit.
 
 
 ### 3. Quantifying the effectiveness of the CAZ
+<img src="images/CAZ/timeseries.png?raw=true"/>
 
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/CAZ/barplot.png?raw=true"/>
 
 ### 4. Conclusions
 
