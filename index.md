@@ -9,7 +9,6 @@
 ---
 [Automating Analysis of Indentation Testing](/page_viscoelasticity.md)
 <img src="images/viscoelasticity/visco_montage.png?raw=true"/>
-
 {% comment %}
 ---
 [Project 3 Title](http://example.com/)
