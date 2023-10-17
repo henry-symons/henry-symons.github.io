@@ -5,9 +5,12 @@
 ### Python Projects
 
 [The Effects of the CAZ on Bristol Air Quality](/page_CAZ_Project.md)
+
 <img src="images/CAZplots.png?raw=true"/>
 ---
+
 [Automating Analysis of Indentation Testing](/page_viscoelasticity.md)
+
 <img src="images/viscoelasticity/visco_montage.png?raw=true"/>
 {% comment %}
 ---
