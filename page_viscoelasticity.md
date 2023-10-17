@@ -23,7 +23,7 @@ Step 2. Optimisation:
 <img src="images/viscoelasticity/CP_precise.png?raw=true"/>
 
 Using the estimated contact point, we then apply a piecewise fitting process to the raw (unfiltered) data to a linear region, and an exponential section. The transition between regimes is used as a fitting parameter, taking the approximate contact point as the initial value, and it's optimised value represents a more precise contact point.
-This optimisation process utilises the [Symfit](https://symfit.readthedocs.io/en/stable/index.html#) module to carry out the fitting. Although this could be directly applied to the raw data, the initial approximation step saves a considerable amount of computation time, and gives more reliable results.
+This optimisation process utilises the [Symfit](https://symfit.readthedocs.io/en/stable/index.html#) module to carry out the piecewise fitting. Although this could be directly applied to the raw data, the initial approximation step saves a considerable amount of computation time, and gives more reliable results.
 
 Finally, we can use the contact point to convert our raw data to modulus values, based on the indentation depth at maximum force:
 
@@ -34,35 +34,31 @@ This calculation uses the [Hertz contact mechanics model](https://en.wikipedia.o
 
 ### 2. Fitting individual curves
 
-To map the spatial distribution of NO2 levels, we introduce a third dataset containing coordinates of air quality measurement sites in Bristol, along with a polygon covering the coordinates of the CAZ. We firstly determine which locations lie within this region, and which belong to each dataset studied:
+To extract useful mechanical properties from the data, the time-dependent modulus from each measurement are fitted to a 3-term Prony series representing the [Generalised Maxwell Model](https://en.wikipedia.org/wiki/Generalized_Maxwell_model). 
 
 <img src="images/viscoelasticity/fitting.png?raw=true"/>
 
-Broadly speaking, we can see NO2 concentrations have decreased year-on-year, however in several locations around the city centre they remain above the 40 μg/m3 limit.
+This fitting yields a series of three characteristic decay times, and more importantly, corresponding modulus values for each indentation measurement made.
 
 
 ### 3. Visualising mechanical properties
 
-To quantify the effects of the CAZ, we consider data from 1 year prior to the introduction of the scheme onwards. Here the number and locations of measurement sites are consistent, and the influence of other factors (e.g. the effects of intermittent COVID-19 measures during 2020 and 2021) should be minimal.
-
-Firstly, we examine a times-series of weekly-average NO2 concentrations, either averaged across all measurement sites, or plotted individually:
+By using a dataset containing a grid of indentation measurements, we are able to automate the batch analysis of all measurements to yield a map of various mechanical properties across the surface of a material:
 
 <img src="images/viscoelasticity/3d.png?raw=true"/>
 
-Looking at the averaged data, weekly concentrations fluctuate significantly making longer-term changes unclear, however, there appears to be slight long-term decrease in NO2 after the introduction of the CAZ. Looking at individual sites, we see that most remain unchanged, however, one site within the CAZ (site ID 501) shows a substantial decrease in NO2 measured after the scheme is introduced.
+This kind of plot shows mechanical heterogeneity on the microscale - an important feature to understand for many applications of viscoelastic materials, particularly those involving interfacing with biological systems.
 
-To see these changes more clearly, mean NO2 concentrations are plotted before and after the introduction of the CAZ for each site:
+
+The same data may be further processed by applying a Fourier transform, to convert a time-dependent response to it's corresponding frequency domain:
 
 <img src="images/viscoelasticity/fourier.png?raw=true"/>
 
-In this plot we can clearly see that all locations within the CAZ have experienced a reduction in mean NO2 concentration, when compared with the year prior to its introduction. In particular, the site with highest NO2 concentrations (site ID 501) has shown a substantial drop and is now close to the target level of 40 µg/m3.
+In this plot we can see the expected response of the material across a broad range of frequencies, with the error bands corresponding to the standard deviation in moduli across the surface of the material. These values are useful for assessing the behaviour of a material subjected to stresses of varying frequencies, and can also be directly compared to values generated from typical viscoelastic measurement techniques.
 
 
 ### 4. Conclusions
 
-Overall, this preliminary analysis appears to indicate that the introduction of the CAZ has been successful in improving air quality around Bristol city centre. All measurement locations within the CAZ have recorded lower NO2 concentrations since the introduction of the scheme. Significantly, the site with the highest concentration the year prior to CAZ introduction (around 64 μg/m3) has since recorded a number much closer to the legal limit (around 47 μg/m3). The observed decreases do no appear to be a result of seasonal changes in NO2 concentrations.
+Overall, the procedure outlined here is a reliable method to automate the complex analysis process for viscoelastic indentation measurements. This technique can rapidly provide a wide range of useful properties, and their distribution across a material. Furthermore, the complete code provides a graphic user interface, allowing this process to be carried out without programming knowledge.
 
-A more comprehensive dataset with a greater number of measurement sites, and additional time passing since the introduction of the scheme will enable more extensive analysis of the effects of the CAZ. For example, an updated diffusion tube dataset containing data for 2023 should allow further insight and quantification of the changes seen.
-
-For more details see [GitHub Project](https://guides.github.com/features/mastering-markdown/).
-
+Underlying code for this analysis process is not currently available but will be added to GitHub upon publication of the corresponding scientific study. However, a related project for purely elastic materials was published in 2022 and can be viewed [here](https://pubs.rsc.org/en/content/articlehtml/2022/sm/d2sm00857b).
