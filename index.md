@@ -7,9 +7,10 @@
 [The Effects of the CAZ on Bristol Air Quality](/page_CAZ_Project.md)
 <img src="images/CAZplots.png?raw=true"/>
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
+[Automating Analysis of Indentation Testing](/page_viscoelasticity.md)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
+{% comment %}
 ---
 [Project 3 Title](http://example.com/)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
@@ -25,7 +26,7 @@
 - [Project 5 Title](http://example.com/)
 
 ---
-
+{% endcomment %}
 
 
 
