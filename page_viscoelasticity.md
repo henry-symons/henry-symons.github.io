@@ -8,19 +8,25 @@ In this project, I create a Python-based application to automate this process, a
 
 ### 1. Contact point determination
 
-Individual indentation curves show 
+Individual indentation curves show the force required to compress a probe a specified distance into a material. One of the key challenges in analysing this type of data is accurately identifying the contact point - the transition between a linear baseline region where sample and probe are not touching, and a curved indentation region where the probe is in contact with the sample. The procedure is made more challenging by noise in the raw data, and the variable nature of the baseline region which may be flat or sloped.
 
+We develop a 2-step method to achieve a compromise of accuracy and computational resources, in order to enable batch processing of thousands of indentation curves in a reasonable timescale.
 
-Firstly, we examine the decreasing long-term trend in NO2 concentration, and validate that the smaller subset of locations (continuous dataset) reflects the overall trend in NO2 levels in the larger set of locations (diffusion tubes dataset):
-<img src="images/CAZ/longterm_no2_trends.png?raw=true"/>
+Step 1. Approximation of contact point:
+<img src="images/viscoelasticity/cp_approx.png?raw=true"/>
 
-We can further investigate temporal trends over shorter time periods within the continuous air quality dataset:
-<img src="images/CAZ/periodic_no2_trends.png?raw=true"/>
+In this plot, we determine the contact point initially as the maximum in the 2nd derivative of force vs probe displacement (i.e. the point at which curvature is greatest). As data are typically noisy, data are smoothed by applying a Savitsky-Golay filter. However, the downside of this smoothing process is a loss of accuracy in the contact point.
 
-Here we can see several periodic trends in NO2 concentrations:
-Firstly, we see a substantial seasonal effect with levels highest during winter, but decreasing by approximately a quarter during the summer months. This behaviour is well documented and could indicate both a change in use (e.g. more heating or engine idling during colder months) and a seasonal difference in the pollutant lifetimes (which are shortest during summer months).
-Secondly, we see a clear pattern associated with typical vehicle usage - a gradual build up during consecutive weekdays, with a substantial drop on weekends.
-Looking on a shorter timescale, mean hourly concentrations peak at over 50 µg/m3 between 8-9 am and 5-6 pm, strongly coinciding with typical commuting times. Notably, overnight NO2 levels decrease to less than half the daytime maxima, showing the relatively short lifetime of this pollutant.
+Step 2. Optimisation: 
+<img src="images/viscoelasticity/cp_precise.png?raw=true"/>
+
+Using the estimated contact point, we then apply a piecewise fitting process to the raw (unfiltered) data to a linear region, and an exponential section. The transition between regimes is used as a fitting parameter, taking the approximate contact point as the initial value, and it's optimised value represents a more precise contact point.
+This optimisation process utlises the [Symfit](https://symfit.readthedocs.io/en/stable/index.html#) module to carry out the fitting. Although this could be directly applied to the raw data, the initial approximation step saves a considerable amount of computation time, and gives more reliable results.
+
+Finally, we can use the contact point to convert our raw data to modulus values, based on the maximum indentation depth:
+<img src="images/viscoelasticity/depth.png?raw=true"/>
+
+This calculation uses the [Hertz contact mechanics model](https://en.wikipedia.org/wiki/Contact_mechanics).
 
 
 ### 2. Spatial mapping of NO2 concentrations
