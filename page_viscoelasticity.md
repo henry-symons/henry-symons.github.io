@@ -13,60 +13,49 @@ Individual indentation curves show the force required to compress a probe a spec
 We develop a 2-step method to achieve a compromise of accuracy and computational resources, in order to enable batch processing of thousands of indentation curves in a reasonable timescale.
 
 Step 1. Approximation of contact point:
+
 <img src="images/viscoelasticity/CP_approx.png?raw=true"/>
 
 In this plot, we determine the contact point initially as the maximum in the 2nd derivative of force vs probe displacement (i.e. the point at which curvature is greatest). As data are typically noisy, data are smoothed by applying a Savitsky-Golay filter. However, the downside of this smoothing process is a loss of accuracy in the contact point.
 
 Step 2. Optimisation: 
+
 <img src="images/viscoelasticity/CP_precise.png?raw=true"/>
 
 Using the estimated contact point, we then apply a piecewise fitting process to the raw (unfiltered) data to a linear region, and an exponential section. The transition between regimes is used as a fitting parameter, taking the approximate contact point as the initial value, and it's optimised value represents a more precise contact point.
-This optimisation process utlises the [Symfit](https://symfit.readthedocs.io/en/stable/index.html#) module to carry out the fitting. Although this could be directly applied to the raw data, the initial approximation step saves a considerable amount of computation time, and gives more reliable results.
+This optimisation process utilises the [Symfit](https://symfit.readthedocs.io/en/stable/index.html#) module to carry out the fitting. Although this could be directly applied to the raw data, the initial approximation step saves a considerable amount of computation time, and gives more reliable results.
 
-Finally, we can use the contact point to convert our raw data to modulus values, based on the maximum indentation depth:
+Finally, we can use the contact point to convert our raw data to modulus values, based on the indentation depth at maximum force:
+
 <img src="images/viscoelasticity/depth.png?raw=true"/>
 
 This calculation uses the [Hertz contact mechanics model](https://en.wikipedia.org/wiki/Contact_mechanics).
 
 
-### 2. Spatial mapping of NO2 concentrations
+### 2. Fitting individual curves
 
 To map the spatial distribution of NO2 levels, we introduce a third dataset containing coordinates of air quality measurement sites in Bristol, along with a polygon covering the coordinates of the CAZ. We firstly determine which locations lie within this region, and which belong to each dataset studied:
-{% include measurement_sites_bristol.html %}
 
-
-This enables the plotting of mean NO2 concentrations at each location by year of the dataset:
-{% include no2_historic_bristol.html %}
-
-
-We can further extend this analysis to the diffusion tube dataset for a more complete picture of NO2 levels since 2010 (however this data does not currently span past 2022 so is not useful for quantifying the effects of the CAZ):
-{% include no2_diffusion_bristol.html %}
-
+<img src="images/viscoelasticity/fitting.png?raw=true"/>
 
 Broadly speaking, we can see NO2 concentrations have decreased year-on-year, however in several locations around the city centre they remain above the 40 μg/m3 limit.
 
 
-### 3. Quantifying the effects of the CAZ
+### 3. Visualising mechanical properties
 
 To quantify the effects of the CAZ, we consider data from 1 year prior to the introduction of the scheme onwards. Here the number and locations of measurement sites are consistent, and the influence of other factors (e.g. the effects of intermittent COVID-19 measures during 2020 and 2021) should be minimal.
 
 Firstly, we examine a times-series of weekly-average NO2 concentrations, either averaged across all measurement sites, or plotted individually:
 
-<img src="images/CAZ/timeseries.png?raw=true"/>
+<img src="images/viscoelasticity/3d.png?raw=true"/>
 
 Looking at the averaged data, weekly concentrations fluctuate significantly making longer-term changes unclear, however, there appears to be slight long-term decrease in NO2 after the introduction of the CAZ. Looking at individual sites, we see that most remain unchanged, however, one site within the CAZ (site ID 501) shows a substantial decrease in NO2 measured after the scheme is introduced.
 
 To see these changes more clearly, mean NO2 concentrations are plotted before and after the introduction of the CAZ for each site:
 
-<img src="images/CAZ/barplot.png?raw=true"/>
+<img src="images/viscoelasticity/fourier.png?raw=true"/>
 
 In this plot we can clearly see that all locations within the CAZ have experienced a reduction in mean NO2 concentration, when compared with the year prior to its introduction. In particular, the site with highest NO2 concentrations (site ID 501) has shown a substantial drop and is now close to the target level of 40 µg/m3.
-
-One final check in this exploratory analysis is to confirm that differences are not simply a result of seasonal variation in NO2, as a full year has not yet passed since the introduction of the CAZ.
-
-<img src="images/CAZ/caz_bymonth.png?raw=true"/>
-
-In these plots, we compare NO2 concentrations by month, averaged over sites either inside or outside the CAZ. We see that for almost all months, sites inside the CAZ have experienced a substantial decrease in NO2 concentration compared with the same months before the CAZ introduction.
 
 
 ### 4. Conclusions
