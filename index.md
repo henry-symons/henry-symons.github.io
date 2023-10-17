@@ -8,7 +8,7 @@
 <img src="images/CAZplots.png?raw=true"/>
 ---
 [Automating Analysis of Indentation Testing](/page_viscoelasticity.md)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/viscoelasticity/visco_montage.png?raw=true"/>
 
 {% comment %}
 ---
