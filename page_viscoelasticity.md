@@ -13,12 +13,12 @@ Individual indentation curves show the force required to compress a probe a spec
 We develop a 2-step method to achieve a compromise of accuracy and computational resources, in order to enable batch processing of thousands of indentation curves in a reasonable timescale.
 
 Step 1. Approximation of contact point:
-<img src="images/viscoelasticity/cp_approx.png?raw=true"/>
+<img src="images/viscoelasticity/CP_approx.png?raw=true"/>
 
 In this plot, we determine the contact point initially as the maximum in the 2nd derivative of force vs probe displacement (i.e. the point at which curvature is greatest). As data are typically noisy, data are smoothed by applying a Savitsky-Golay filter. However, the downside of this smoothing process is a loss of accuracy in the contact point.
 
 Step 2. Optimisation: 
-<img src="images/viscoelasticity/cp_precise.png?raw=true"/>
+<img src="images/viscoelasticity/CP_precise.png?raw=true"/>
 
 Using the estimated contact point, we then apply a piecewise fitting process to the raw (unfiltered) data to a linear region, and an exponential section. The transition between regimes is used as a fitting parameter, taking the approximate contact point as the initial value, and it's optimised value represents a more precise contact point.
 This optimisation process utlises the [Symfit](https://symfit.readthedocs.io/en/stable/index.html#) module to carry out the fitting. Although this could be directly applied to the raw data, the initial approximation step saves a considerable amount of computation time, and gives more reliable results.
