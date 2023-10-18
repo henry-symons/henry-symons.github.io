@@ -68,4 +68,4 @@ Overall, this preliminary analysis appears to indicate that the introduction of 
 
 A more comprehensive dataset with a greater number of measurement sites, and additional time passing since the introduction of the scheme will enable more extensive analysis of the effects of the CAZ. For example, an updated diffusion tube dataset containing data for 2023 should allow further insight and quantification of the changes seen.
 
-For more details see [GitHub Project](https://guides.github.com/features/mastering-markdown/).
+For more details see [GitHub Project](https://github.com/henry-symons/Bristol-CAZ-project/).
